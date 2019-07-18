@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Add new Client{% endblock %}
+
+{% block body %}
+ <!-- Page Content-->
+        <section class="section-padding gray-bg log-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-sm-offset-3 card card-panel">
+                        <h3 class="text-extrabold">Create a new Client</h3>
+                          <a href="{{path ('admin_pannel')}}">Back to admin Pannel</a>
+                          <form action="{{path ('new_client')}}" id="register-form" role="form" method="post" accept-char="UTF-8" autocomplete="off" data-parsley-validate> 
+           {{ form_row(form._token) }}  
+                            <div class="input-field">
+                                <input  data-parsley-trigger="change" id="societyname" name="clients[societyname]" type="text" value="">
+                                <label for="societyname">societyname</label>
+                            </div>
+                            <div class="input-field">
+                                <input  data-parsley-trigger="change" id="societytype" name="clients[societytype]" type="text" value="">
+                                <label for="societytype">societytype</label>
+                            </div>
+                            <div class="input-field">
+                                <input  data-parsley-trigger="change" id="nameofcontact" name="clients[nameofcontact]" type="text" value="">
+                                <label for="nameofcontact">nameofcontact</label>
+                            </div>
+                            <div class="input-field">
+                                <input  data-parsley-trigger="change" id="contactpost" name="clients[contactpost]" type="text" value="">
+                                <label for="contactpost">contactpost</label>
+                            </div>
+                            <div class="input-field">
+                                <input  data-parsley-trigger="change" id="contactnumber" name="clients[contactnumber]" type="text" value="">
+                                <label for="contactnumber">contactnumber</label>
+                            </div>
+                            <div class="input-field">
+                                <input  data-parsley-trigger="change" id="contactemail" name="clients[contactemail]" type="text" value="">
+                                <label for="contactemail">contactemail</label>
+                            </div>
+                            <div class="input-field">
+                                <input  data-parsley-trigger="change" id="notes" name="clients[notes]" type="text" value="">
+                                <label for="notes">notes</label>
+                            </div>
+                            
+                            <button class="btn btn-lg gradient secondary bn-block waves-effect waves-light mt-20 mb-20" type="submit">Create a Job Offer</button>
+                          </form>
+                        </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+{% endblock %}
+

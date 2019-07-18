@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Admin Pannel{% endblock %}
+
+{% block body %}
+
+ <!-- Page Content-->
+        <section class="section-padding gray-bg log-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-sm-offset-3 card card-panel">
+                    {% for message in app.flashes('success') %}
+                    <span style="color:green">
+                    {{ message }}
+                    {% endfor %}
+                        <h3 class="text-extrabold">Admin Pannel</h3>
+                          <a href="{{path ('new_job')}}">Add Job Offer</a>
+                          <hr>
+                          <a href="{{path ('new_client')}}">Add Client</a>
+
+                        </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+{% endblock %}
+

@@ -1,0 +1,63 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Add new Job{% endblock %}
+
+{% block body %}
+ <!-- Page Content-->
+        <section class="section-padding gray-bg log-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-sm-offset-3 card card-panel">
+                        <h3 class="text-extrabold">Create a new JobOffer</h3>
+                          <a href="{{path ('admin_pannel')}}">Back to admin Pannel</a>
+                          <form action="{{path ('new_job')}}" id="register-form" role="form" method="post" accept-char="UTF-8" autocomplete="off" data-parsley-validate> 
+           {{ form_row(form._token) }}  
+                                              
+                            <div class="input-field">
+                                <input id="reference" name="joboffers[reference]" type="text" value="">
+                                <label for="reference">reference</label>
+                            </div>
+                            <div class="input-field">
+                                <input id="description" name="joboffers[description]" type="text" value="">
+                                <label for="description">description</label>
+                            </div>
+                            <div class="input-field">
+                                <input id="notes" name="joboffers[notes]" type="text" value="">
+                                <label for="notes">notes</label>
+                            </div>
+                            <div class="input-field">
+                                <input id="jobtitle" name="joboffers[jobtitle]" type="text" value="">
+                                <label for="jobtitle">jobtitle</label>
+                            </div>
+                            <div class="input-field">
+                                <input id="jobtype" name="joboffers[jobtype]" type="text" value="">
+                                <label for="jobtype">jobtype</label>
+                            </div>
+                            <div class="input-field">
+                                <input id="location" name="joboffers[location]" type="text" value="">
+                                <label for="location">location</label>
+                            </div>
+                            <div class="input-field">
+                                <input id="salary" name="joboffers[salary]" type="text" value="">
+                                <label for="salary">salary</label>
+                            </div>
+                                <div class="input-field">
+                                {# <select id="client" name="joboffers[client]">
+
+                                {% for client in clients %}
+                                <option value="{{ client.id }}">{{ client.societyname }}</option>
+                                {% endfor %}
+                                 #}
+                                 {{ form_row(form.client)}}
+                            </div>   
+                            
+                            <button class="btn btn-lg gradient secondary bn-block waves-effect waves-light mt-20 mb-20" type="submit">Create a Job Offer</button>
+                          </form>
+                        </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+{% endblock %}
+
