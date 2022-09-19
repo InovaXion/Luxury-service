@@ -1,3 +1,3 @@
 # Luxury-service
 
-## Projet TP terminé à 15%
+## Projet TP terminé
